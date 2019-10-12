@@ -5,5 +5,4 @@ Compiled using
 
 Executeable using 
 `./a` 
-
-You can use your own executeable names as well.
+Or whatever executeable name you use.

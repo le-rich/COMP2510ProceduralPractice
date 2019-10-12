@@ -7,7 +7,7 @@
 		Q2.txt.
  */
 int main(void){
-	FILE *ofp = fopen("Q2.txt", "w"); 									/* Creates a pointer to a file stream called Q1.txt */
+	FILE *ofp = fopen("iofiles/Q2.txt", "w"); 									/* Creates a pointer to a file stream called Q1.txt */
 
 	char message[1024];
 	printf("Please enter a message to encode: ");

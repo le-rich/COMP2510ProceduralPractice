@@ -14,5 +14,7 @@ int main(void){
 	fgets(message, LINESIZE, stdin); 										/* Put into string, message, a stream of characters of size LINESIZE, from stdin */
 	fprintf(ofp, "%s", message);
 
+	fclose(ofp);
+
 	return 0;
 }

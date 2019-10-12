@@ -19,5 +19,7 @@ int main(void){
 		printf("%c", c);															/* Print the character. */
 	}
 
+	fclose(ifp);
+
 	return 0;
 }

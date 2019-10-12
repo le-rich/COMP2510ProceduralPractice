@@ -12,5 +12,8 @@ int main(void){
 	scanf("%s", message);
 	fprintf(ofp, "%s", message);
 
+
+	fclose(ofp);
+
 	return 0;
 }

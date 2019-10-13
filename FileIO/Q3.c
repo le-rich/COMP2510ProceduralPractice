@@ -3,7 +3,8 @@
 #define LINESIZE 1024
 
 /*  
-		User is prompted for a file name, contents are then printed to stdout.
+		User is prompted for a file name, contents are then printed to stdout character by character.
+		If you wanted line by line view Q4 or replace getc with fgets(<outputstring>, <fetch size>, <stream>);
  */
 int main(void){
 	FILE *ifp;																			/* Input file pointer */

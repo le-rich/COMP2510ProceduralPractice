@@ -1,19 +1,31 @@
-a) Invalid. Will produce a runtime error.
+a) Valid.
 
-Remember that char arrays are pointers to the first element
-of the array. In the example, we're trying to access the address of the pointer itself. 
+a is a pointer to the first index of the string "hello".
+When we access a[1], we get e. However, we then get it's address, using &a[1]. 
+
+This means that &a[1] is the address of the character e. It's a valid pointer. We then assign p to point to this same character.
+
+When we print, remember we print until the null character is reached, which is at the end of hello. We start at e, then keep going. Therefore, we print "ello".
 
 =================================================
 
-b) Valid. Outputs "whrld"
+b) Invalid. Produces a seg fault.
 
-First we access the [1th] value of "world", which is 'o'.
-We then set that to the value that is a is pointing to.
-Which in this case, is the first letter of "hello".
-Because remember, char arrays are pointers to the first element of the array.
+"world" is being put in the read only parts of memory in heap. 
 
-p[1] is now 'h'.
-printf then prints the entire string p, "whrld".
+Making p a pointer that makes any writing operation on this memory illegal. Hence, producing the seg fault.
+
+
+"While doing:
+
+char s[] = "Hello world";
+
+puts the literal string in read-only memory in heap and makes a copy of the string in newly allocated memory on the stack. Thus making
+
+s[0] = 'J';   
+
+legal"
+
 
 =================================================
 
@@ -32,3 +44,6 @@ arr1 = arr2;
 It's the equivalent of saying arr1 = &arr2[0] which tries
 to assign an array type to a pointer.
 
+"char* and char[] are different types, but it's not immediately apparent in all cases. This is because arrays decay into pointers, meaning that if an expression of type char[] is provided where one of type char* is expected, the compiler automatically converts the array into a pointer to its first element."
+
+Notice that we can not decay or upcast a pointer to a char[] type in that explanation, though we can do the inverse.

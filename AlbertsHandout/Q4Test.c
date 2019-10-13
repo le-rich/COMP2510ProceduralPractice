@@ -2,13 +2,13 @@
 
 void test1(void);
 void test2(void);
-void test3(void);
+/* void test3(void); */
 
 
 int main(void){
 	test1();
-	test2();
-	test3();
+	/* test2(); */
+	/* test3(); */
 
 	return 0;
 }
@@ -28,9 +28,13 @@ void test2(void){
 	printf("Test 2: %s", p);
 }
 
+/* Commentted out because of compilation error
+
 void test3(void){
 	char a[] = "hello";
 	char *p = "world";
 	a = p;
 	printf("Test 3: %s", p);
 }
+
+*/

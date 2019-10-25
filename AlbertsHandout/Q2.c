@@ -47,6 +47,8 @@ void lowercase_copy(char dest[], const char src[]){
 	for (i = 0; src[i] != '\0'; ++i){
 		dest[i] = tolower(src[i]);
 	}
+	
+	dest[i] = '\0';
 }
 
 /* d */
